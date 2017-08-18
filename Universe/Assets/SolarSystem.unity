@@ -255,8 +255,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1318830427}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.118975185, y: -0.2517743, z: 0.031198278, w: 0.95993817}
+  m_LocalPosition: {x: 0.87800825, y: 0.45035222, z: -1.5586376}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -294,12 +294,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Earth
-  radius: 5
-  tilt: 29
-  dayLength:
-    hours: 24
-    minutes: 0
-    seconds: 0
+  radius: 1
+  tilt: 31
+  day: 24
   velocity: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
 --- !u!54 &1889943188
@@ -374,9 +371,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1889943186}
-  m_LocalRotation: {x: 0.25038004, y: 0, z: 0, w: 0.96814764}
+  m_LocalRotation: {x: 0.26723838, y: 0, z: 0, w: 0.96363044}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2

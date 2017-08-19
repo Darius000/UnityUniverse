@@ -3,7 +3,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-
 [RequireComponent(typeof(LineRenderer))]
 public class CelestrialObject : MonoBehaviour {
 
@@ -19,7 +18,8 @@ public class CelestrialObject : MonoBehaviour {
 
     [Header("Planet Revolution")]
     [Space]
-    [Range(0f,1f)]
+    public bool ShowPath = false;
+    [Range(0f, 1f)]
     public float eccentricity = 0f;
     public float distance = 0f;
     public float year = 8760 ;
@@ -32,7 +32,7 @@ public class CelestrialObject : MonoBehaviour {
     private int size = 60;
     private float width = .03f;
 
-
+    
     void Awake()
     {
         line = gameObject.GetComponent<LineRenderer>();
@@ -42,15 +42,20 @@ public class CelestrialObject : MonoBehaviour {
         transform.localScale = Vector3.one * radius;
     }
 
+    void Start()
+    {
+
+    }
+
     void Update()
     {
-        if (parent != null)
-        {
-            Revolution(distance);
-        }
+            if (parent != null)
+            {
+                Revolution(distance);
+            }
 
-        Rotation(day);
 
+            Rotation(day);
     }
 
     void OnDrawGizmos()
@@ -61,32 +66,41 @@ public class CelestrialObject : MonoBehaviour {
 
     void Rotation(float hours)
     {
-        float speed = 360f / (hours * 60f );
-        transform.Rotate(0f,speed,0f);
-        
+        if (hours > 0f)
+        {
+            float speed = 360f / (hours * 60f);
+            transform.Rotate(0f, speed, 0f);
+        }
+        else
+        {
+            return;
+        }
     }
 
     void Revolution(float distance)
     {
         transform.position = RevolutionPosition();
 
-        float deltaTheta = (2.0f * Mathf.PI) / size;
-        float theta = 0f;
-
-        for (int i = 0; i < size; i++)
+        if (ShowPath)
         {
+            float deltaTheta = (2.0f * Mathf.PI) / (size - 1);
+            float theta = 0f;
 
-            Vector3 linePos = RevolutionPath(theta);
-            line.SetPosition(i, linePos);
+            for (int i = 0; i < size; i++)
+            {
 
-            theta += deltaTheta;
+                Vector3 linePos = RevolutionPath(theta);
+                line.SetPosition(i, linePos);
+
+                theta += deltaTheta;
+            }
         }
     }
 
     Vector3 RevolutionPosition()
     {
-          year = year * 60f;
-         return new Vector3(parent.transform.position.x + Mathf.Sin(Time.fixedTime * (1/year) * (eccentricity + 1f)) * distance, 0f, parent.transform.position.z + Mathf.Cos(Time.fixedTime * (1 / year) * (eccentricity + 1f)) * distance);
+          //year = year * 60f;
+         return new Vector3(parent.transform.position.x + Mathf.Sin(-Time.fixedTime * (1/year) * (eccentricity + 1f)) * distance, 0f, parent.transform.position.z + Mathf.Cos(-Time.fixedTime * (1 / year) * (eccentricity + 1f)) * distance);
 
     }
 

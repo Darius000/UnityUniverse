@@ -3,69 +3,114 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(Rigidbody))]
+
+[RequireComponent(typeof(LineRenderer))]
 public class CelestrialObject : MonoBehaviour {
 
-    
-    public static List<CelestrialObject> CelestrialObjects;
+    [Header("Appearance")]
     public new string name = "Object"; // planet name
     public float radius = 1f; // radius in miles ex: Earth miles = 3959f = 1f
-    public float tilt = 0f; // planet axial tilt in degrees
+
+    [Header("Planet Rotation")]
+    [Space]
     public float day = 24f; // length of day in hours : ex: Earth = 24 hours or 23.59 hours
-    
+    public bool showTilt = true;
+    public float tiltDistance = 10f; //show tilt gizmo at distance
 
-    public Vector3 velocity = new Vector3(0f,0f,0f);
+    [Header("Planet Revolution")]
+    [Space]
+    [Range(0f,1f)]
+    public float eccentricity = 0f;
+    public float distance = 0f;
+    public float year = 8760 ;
+
+    [Header("Parent Object")]
+    [Space]
+    public CelestrialObject parent;
+
+    private LineRenderer line;
+    private int size = 60;
+    private float width = .03f;
 
 
-    public Rigidbody rb;
-    public float mass;
-
-    private void OnEnable()
+    void Awake()
     {
-        if (CelestrialObjects == null)
-            CelestrialObjects = new List<CelestrialObject>();
-
-        CelestrialObjects.Add(this);
+        line = gameObject.GetComponent<LineRenderer>();
+        line.positionCount = size;
+        line.startWidth = width;
+        line.endWidth = width;
+        transform.localScale = Vector3.one * radius;
     }
 
-    private void OnDisable()
+    void Update()
     {
-        CelestrialObjects.Remove(this);    
-    }
-
-    private void FixedUpdate()
-    {
-        foreach(CelestrialObject Obj in CelestrialObjects)
+        if (parent != null)
         {
-            if (Obj != this)
-                Gravitation(Obj);
+            Revolution(distance);
         }
 
-        rb.AddForce(velocity);
         Rotation(day);
+
     }
 
-    void Gravitation(CelestrialObject otherObject)
+    void OnDrawGizmos()
     {
-        Vector3 direction = otherObject.rb.transform.position - rb.transform.position;
-        float distance = Mathf.Pow((otherObject.rb.transform.position - rb.transform.position).magnitude, 2f);
+        ShowAxialTilt(showTilt, tiltDistance);
 
-        if (distance == 0f)
-            return;
-
-        float GConstant = 6.647f;
-        float Mass = otherObject.mass * mass;
-       
-        float magnitude = GConstant * (Mass / distance);
-        Vector3 force = magnitude * direction.normalized;
-        rb.AddForce(force);
     }
 
     void Rotation(float hours)
     {
-        float speed = 360f / (hours * 3600f);
-        rb.transform.Rotate(0f,speed,0f);
+        float speed = 360f / (hours * 60f );
+        transform.Rotate(0f,speed,0f);
         
     }
+
+    void Revolution(float distance)
+    {
+        transform.position = RevolutionPosition();
+
+        float deltaTheta = (2.0f * Mathf.PI) / size;
+        float theta = 0f;
+
+        for (int i = 0; i < size; i++)
+        {
+
+            Vector3 linePos = RevolutionPath(theta);
+            line.SetPosition(i, linePos);
+
+            theta += deltaTheta;
+        }
+    }
+
+    Vector3 RevolutionPosition()
+    {
+          year = year * 60f;
+         return new Vector3(parent.transform.position.x + Mathf.Sin(Time.fixedTime * (1/year) * (eccentricity + 1f)) * distance, 0f, parent.transform.position.z + Mathf.Cos(Time.fixedTime * (1 / year) * (eccentricity + 1f)) * distance);
+
+    }
+
+    Vector3 RevolutionPath(float theta)
+    {
+
+        return new Vector3(parent.transform.position.x + Mathf.Sin(theta  * (eccentricity + 1f)) * distance, 0f, parent.transform.position.z + Mathf.Cos(theta  * (eccentricity + 1f)) * distance);
+
+    }
+
+
+
+    void ShowAxialTilt(bool show, float distance)
+    {
+        if (show)
+        {
+           
+            Vector3 direction = transform.up * distance;
+
+            Debug.DrawRay(transform.position, direction, Color.red);
+        }
+    }
 }
+
+
+
 

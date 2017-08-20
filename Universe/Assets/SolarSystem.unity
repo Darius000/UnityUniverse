@@ -245,6 +245,7 @@ MonoBehaviour:
   name: Pluto
   radius: 0.12
   day: 153.36
+  axialTilt: 0
   showTilt: 1
   tiltDistance: 7
   ShowPath: 1
@@ -312,7 +313,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 3cb2e46efef45cc488d92548ea390ac8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5830759
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3cb2e46efef45cc488d92548ea390ac8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -320,23 +321,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3cb2e46efef45cc488d92548ea390ac8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 72.228806
+      value: 74.23
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3cb2e46efef45cc488d92548ea390ac8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.15631719
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3cb2e46efef45cc488d92548ea390ac8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6804389
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3cb2e46efef45cc488d92548ea390ac8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.15203372
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3cb2e46efef45cc488d92548ea390ac8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.69960964
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3cb2e46efef45cc488d92548ea390ac8, type: 3}
       propertyPath: m_RootOrder
@@ -344,15 +345,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3cb2e46efef45cc488d92548ea390ac8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.001
+      value: 0.0005
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3cb2e46efef45cc488d92548ea390ac8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.001
+      value: 0.0005
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3cb2e46efef45cc488d92548ea390ac8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.001
+      value: 0.0005
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3cb2e46efef45cc488d92548ea390ac8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -382,7 +383,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 4f01a46dfe3928043a128781c56294c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f01a46dfe3928043a128781c56294c9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -390,7 +391,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f01a46dfe3928043a128781c56294c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 73.23
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f01a46dfe3928043a128781c56294c9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -398,11 +399,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f01a46dfe3928043a128781c56294c9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f01a46dfe3928043a128781c56294c9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f01a46dfe3928043a128781c56294c9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -414,15 +415,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f01a46dfe3928043a128781c56294c9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.001
+      value: 0.0006
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f01a46dfe3928043a128781c56294c9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.001
+      value: 0.0006
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f01a46dfe3928043a128781c56294c9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.001
+      value: 0.0006
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 4f01a46dfe3928043a128781c56294c9, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -449,6 +450,7 @@ MonoBehaviour:
   name: Object
   radius: 0.0005
   day: 0
+  axialTilt: 0
   showTilt: 1
   tiltDistance: 0.3
   ShowPath: 1
@@ -576,6 +578,7 @@ MonoBehaviour:
   name: Jupiter
   radius: 9.92
   day: 12
+  axialTilt: 3.13
   showTilt: 1
   tiltDistance: 7
   ShowPath: 1
@@ -640,8 +643,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 344136265}
-  m_LocalRotation: {x: -0.00011421609, y: 0.99964786, z: 0.026176741, w: -0.0043617506}
-  m_LocalPosition: {x: -0.29458374, y: 0, z: 414.3699}
+  m_LocalRotation: {x: 0.027311008, y: 0, z: 0, w: 0.999627}
+  m_LocalPosition: {x: 0, y: 0, z: 414.37}
   m_LocalScale: {x: 9.92, y: 9.92, z: 9.92}
   m_Children: []
   m_Father: {fileID: 0}
@@ -771,6 +774,7 @@ MonoBehaviour:
   name: Moon
   radius: 0.273
   day: 696
+  axialTilt: 0
   showTilt: 1
   tiltDistance: 1.5
   ShowPath: 1
@@ -835,8 +839,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 357780019}
-  m_LocalRotation: {x: 0.058413666, y: 0.027108202, z: 0.0015867852, w: 0.99792314}
-  m_LocalPosition: {x: -0.87733036, y: 0, z: 25.966463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 25.98}
   m_LocalScale: {x: 0.273, y: 0.273, z: 0.273}
   m_Children: []
   m_Father: {fileID: 0}
@@ -966,6 +970,7 @@ MonoBehaviour:
   name: Pluto
   radius: 0.18
   day: 153.36
+  axialTilt: 120
   showTilt: 1
   tiltDistance: 7
   ShowPath: 1
@@ -1030,8 +1035,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 483026172}
-  m_LocalRotation: {x: 0.85776097, y: 0.06183229, z: 0.10625934, w: 0.49913123}
-  m_LocalPosition: {x: 0.19231781, y: 0, z: -0.05493164}
+  m_LocalRotation: {x: 0.86602545, y: 0, z: 0, w: 0.49999997}
+  m_LocalPosition: {x: 0.12648627, y: 0, z: 0.19995117}
   m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
   m_Children: []
   m_Father: {fileID: 621073328}
@@ -1145,6 +1150,7 @@ MonoBehaviour:
   name: Object
   radius: 0.0006
   day: 0
+  axialTilt: 0
   showTilt: 1
   tiltDistance: 0.3
   ShowPath: 1
@@ -1269,6 +1275,7 @@ MonoBehaviour:
   name: PlutoSysyem
   radius: 1
   day: 0
+  axialTilt: 0
   showTilt: 1
   tiltDistance: 0
   ShowPath: 0
@@ -1505,6 +1512,7 @@ MonoBehaviour:
   name: Venus
   radius: 0.38
   day: 1416
+  axialTilt: 0.01
   showTilt: 1
   tiltDistance: 1.5
   ShowPath: 1
@@ -1569,8 +1577,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 790991656}
-  m_LocalRotation: {x: 0.00008725239, y: 0.013348425, z: 0.0000011647851, w: 0.99991095}
-  m_LocalPosition: {x: -1.2476935, y: 0, z: -33.441643}
+  m_LocalRotation: {x: 0.00008726646, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0, z: -33.420002}
   m_LocalScale: {x: 0.38, y: 0.38, z: 0.38}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1700,6 +1708,7 @@ MonoBehaviour:
   name: Mars
   radius: 0.53
   day: 24.5
+  axialTilt: 25.19
   showTilt: 1
   tiltDistance: 1.5
   ShowPath: 1
@@ -1764,8 +1773,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1006400311}
-  m_LocalRotation: {x: 0.15631719, y: 0.6804389, z: 0.15203372, w: 0.69960964}
-  m_LocalPosition: {x: -0.5830759, y: 0, z: 72.228806}
+  m_LocalRotation: {x: 0.21805808, y: 0, z: 0, w: 0.9759358}
+  m_LocalPosition: {x: 0, y: 0, z: 72.23}
   m_LocalScale: {x: 0.53, y: 0.53, z: 0.53}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1895,6 +1904,7 @@ MonoBehaviour:
   name: Jupiter
   radius: 9.14
   day: 10.7
+  axialTilt: 26.73
   showTilt: 1
   tiltDistance: 7
   ShowPath: 1
@@ -1959,8 +1969,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1110187223}
-  m_LocalRotation: {x: -0.04495715, y: 0.95433897, z: 0.22673962, w: -0.18922283}
-  m_LocalPosition: {x: -0.22064847, y: 0, z: 821.3}
+  m_LocalRotation: {x: 0.23115362, y: 0, z: 0, w: 0.97291726}
+  m_LocalPosition: {x: 0, y: 0, z: 821.3}
   m_LocalScale: {x: 9.14, y: 9.14, z: 9.14}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2090,6 +2100,7 @@ MonoBehaviour:
   name: Jupiter
   radius: 3.86
   day: 16
+  axialTilt: 28.32
   showTilt: 1
   tiltDistance: 7
   ShowPath: 1
@@ -2154,8 +2165,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1268513482}
-  m_LocalRotation: {x: 0.092876, y: 0.8970184, z: 0.22631443, w: 0.36812225}
-  m_LocalPosition: {x: -0.11848316, y: 0, z: 2730.6}
+  m_LocalRotation: {x: 0.24463055, y: 0, z: 0, w: 0.9696164}
+  m_LocalPosition: {x: 0, y: 0, z: 2730.6}
   m_LocalScale: {x: 3.86, y: 3.86, z: 3.86}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2335,6 +2346,7 @@ MonoBehaviour:
   name: Sun
   radius: 20
   day: 600
+  axialTilt: 0
   showTilt: 1
   tiltDistance: 1.5
   ShowPath: 0
@@ -2399,9 +2411,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1745751082}
-  m_LocalRotation: {x: 0, y: 0.03149799, z: 0, w: 0.99950385}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -69.4}
-  m_LocalScale: {x: 30, y: 30, z: 30}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -2530,6 +2542,7 @@ MonoBehaviour:
   name: Venus
   radius: 0.94
   day: 5832
+  axialTilt: 177.3
   showTilt: 1
   tiltDistance: 1.5
   ShowPath: 1
@@ -2594,8 +2607,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1763957653}
-  m_LocalRotation: {x: 0.9996521, y: 0.000084841486, z: 0.0032399402, w: 0.02617693}
-  m_LocalPosition: {x: -0.7647559, y: 0, z: -2.1643522}
+  m_LocalRotation: {x: 0.9997225, y: 0, z: 0, w: 0.023559732}
+  m_LocalPosition: {x: -0, y: -0, z: -2.1600037}
   m_LocalScale: {x: 0.94, y: 0.94, z: 0.94}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2725,6 +2738,7 @@ MonoBehaviour:
   name: Earth
   radius: 1
   day: 24
+  axialTilt: 23.26
   showTilt: 1
   tiltDistance: 1.5
   ShowPath: 1
@@ -2789,8 +2803,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1889943186}
-  m_LocalRotation: {x: 0.1436819, y: 0.6937988, z: 0.14431033, w: 0.69077736}
-  m_LocalPosition: {x: -0.64592755, y: 0, z: 23.597754}
+  m_LocalRotation: {x: 0.2015908, y: 0, z: 0, w: 0.97946984}
+  m_LocalPosition: {x: 0, y: 0, z: 23.599998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3010,6 +3024,7 @@ MonoBehaviour:
   name: Jupiter
   radius: 3.98
   day: 17.24
+  axialTilt: 97.77
   showTilt: 1
   tiltDistance: 7
   ShowPath: 1
@@ -3074,8 +3089,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2021193441}
-  m_LocalRotation: {x: 0.34415132, y: 0.5849554, z: 0.6701928, w: 0.30038095}
-  m_LocalPosition: {x: -0.1540824, y: 0, z: 1720.6}
+  m_LocalRotation: {x: 0.75339127, y: 0, z: 0, w: 0.6575725}
+  m_LocalPosition: {x: 0, y: 0, z: 1720.6}
   m_LocalScale: {x: 3.98, y: 3.98, z: 3.98}
   m_Children: []
   m_Father: {fileID: 0}

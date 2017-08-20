@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(LineRenderer))]
-public class CelestrialObject : MonoBehaviour {
+public class Planet : MonoBehaviour {
 
     [Header("Appearance")]
     public new string name = "Object"; // planet name
@@ -13,6 +13,7 @@ public class CelestrialObject : MonoBehaviour {
     [Header("Planet Rotation")]
     [Space]
     public float day = 24f; // length of day in hours : ex: Earth = 24 hours or 23.59 hours
+    public float axialTilt = 0f;
     public bool showTilt = true;
     public float tiltDistance = 10f; //show tilt gizmo at distance
 
@@ -26,7 +27,7 @@ public class CelestrialObject : MonoBehaviour {
 
     [Header("Parent Object")]
     [Space]
-    public CelestrialObject parent;
+    public Planet parent;
 
     private LineRenderer line;
     private int size = 60;

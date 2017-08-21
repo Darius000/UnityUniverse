@@ -3,12 +3,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+
 [RequireComponent(typeof(LineRenderer))]
 public class Planet : MonoBehaviour {
 
     [Header("Appearance")]
     public new string name = "Object"; // planet name
-    public float radius = 1f; // radius in miles ex: Earth miles = 3959f = 1f
+    public float radius = .05f; // radius in miles ex: Earth miles = 3959f = 1f
 
     [Header("Planet Rotation")]
     [Space]
@@ -34,22 +35,26 @@ public class Planet : MonoBehaviour {
     [Header("Parent Object")]
     [Space]
     public Planet parent;
-
     public LineRenderer line;
     private int size = 100;
-    private float width = 2f;
-
+    private float width = .2f;
+    private GameManager manager;
+    
     
     void Awake()
     {
         if (line == null)
         {
             line = gameObject.GetComponent<LineRenderer>();
+           
         }
 
         line.positionCount = size;
         line.startWidth = width;
         line.endWidth = width;
+
+        manager = FindObjectOfType<GameManager>();
+        manager.planets.Add(this);
     }
 
     void Start()
@@ -86,7 +91,6 @@ public class Planet : MonoBehaviour {
     void OnDrawGizmos()
     {
         ShowAxialTilt(showTilt, tiltDistance);
-
         
     }
 
@@ -111,9 +115,10 @@ public class Planet : MonoBehaviour {
 
     public Vector3 RevolutionPosition()
     {
+        
         if (year != 0)
         {
-            return parent.transform.position + new Vector3((eccentricity + 1f) * Mathf.Cos(-Time.fixedTime * (1 / year) ) * distance, 0f, Mathf.Sin(-Time.fixedTime * (1 / year)) * distance);
+            return EllipseFoci() + parent.transform.position + new Vector3(parent.radius + (eccentricity + 1f) * Mathf.Cos(-Time.fixedTime * (1 / year) ) * distance, 0f, Mathf.Sin(-Time.fixedTime * (1 / year)) * distance);
         }
         else
         {
@@ -122,21 +127,22 @@ public class Planet : MonoBehaviour {
     }
 
     public Vector3 RevolutionPosition(float theta)
-    {   
-            return EllipseFoci() + parent.transform.position + new Vector3((eccentricity + 1f) *  Mathf.Cos(theta) * distance, 0f, Mathf.Sin(theta ) * distance);
+    {
+       
+
+        return EllipseFoci() + parent.transform.position + new Vector3(parent.radius + (eccentricity + 1f) *  Mathf.Cos(theta) * distance, 0f, Mathf.Sin(theta ) * distance);
     }
 
     public Vector3 EllipseFoci()
     {
-        Vector3 fociPoint = new Vector3();
+        float distance2 = distance * (1f + eccentricity);
+        float x2 = distance * distance;
+        float z2 = distance2 * distance2;
+        float F = Mathf.Sqrt(z2 - x2);
 
-        float b = distance;
+        //Debug.Log(distance2 + " " + x2 + " " + z2 + " " + F);
 
-        float a = b / Mathf.Sin(90);
-
-        float c = Mathf.Sqrt(a * a + b * b);
-
-        fociPoint = new Vector3(c, 0f, 0f);
+        Vector3 fociPoint = new Vector3(F,0f,0f);
 
         return fociPoint;
     }

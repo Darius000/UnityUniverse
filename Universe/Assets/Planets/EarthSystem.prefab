@@ -75,8 +75,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1537109255101904}
   m_LocalRotation: {x: 0.085195936, y: 0.8877012, z: 0.18270332, w: 0.41394177}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 0.0911, y: 0.0911, z: 0.0911}
   m_Children: []
   m_Father: {fileID: 4761991959688672}
   m_RootOrder: 0
@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1125618874071926}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 93}
+  m_LocalPosition: {x: 121.52542, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4581738244158880}
@@ -103,8 +103,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1607852330932522}
   m_LocalRotation: {x: -0, y: 0.9135455, z: -0, w: 0.40673664}
-  m_LocalPosition: {x: 0, y: 0, z: 2.6800003}
-  m_LocalScale: {x: 0.273, y: 0.273, z: 0.273}
+  m_LocalPosition: {x: 1.4232941, y: 0, z: 0}
+  m_LocalScale: {x: 0.0248, y: 0.0248, z: 0.0248}
   m_Children: []
   m_Father: {fileID: 4761991959688672}
   m_RootOrder: 1
@@ -122,7 +122,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a2d7bec94fe8e3f4ba98ee67713a7b1c, type: 2}
+  - {fileID: 2100000, guid: 2d3e8a23f89667946884bf4fbe7d1588, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -207,8 +207,8 @@ MonoBehaviour:
   tiltDistance: 0
   ShowPath: 1
   startPosition: 6.1
-  eccentricity: 0.005
-  distance: 93
+  eccentricity: 0.0167
+  distance: 92.96
   year: 8760
   parent: {fileID: 0}
   line: {fileID: 120961084840468622}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Moon
-  radius: 0.273
+  radius: 0.0248
   startRotation: 132
   day: 696
   axialTilt: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
   ShowPath: 1
   startPosition: 2.59
   eccentricity: 0.0549
-  distance: 2.68
+  distance: 0.238855
   year: 655.2
   parent: {fileID: 114889004489271754}
   line: {fileID: 120447940778089618}
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Earth
-  radius: 1
+  radius: 0.0911
   startRotation: 130
   day: 24
   axialTilt: 23.26
@@ -365,7 +365,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2929f592a8b7a90409ad6a057e167a20, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -431,7 +431,7 @@ LineRenderer:
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
-    alignment: 0
+    alignment: 1
     textureMode: 0
     generateLightingData: 0
   m_UseWorldSpace: 1

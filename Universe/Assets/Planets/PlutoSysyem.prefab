@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 120757773006183098}
   m_Layer: 0
   m_Name: Pluto
-  m_TagString: Untagged
+  m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 120302713913916788}
   m_Layer: 0
   m_Name: Charon
-  m_TagString: Untagged
+  m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,8 +75,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1214856456873528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalScale: {x: 0.0086, y: 0.0086, z: 0.0086}
   m_Children: []
   m_Father: {fileID: 4626797544923414}
   m_RootOrder: 1
@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1388443999102340}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3493.494, y: 0, z: 916.7039}
+  m_LocalPosition: {x: 7258.331, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4924995835271664}
@@ -103,8 +103,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1114101383886450}
   m_LocalRotation: {x: 0.7911536, y: 0.2033683, z: 0.35224426, w: 0.45677269}
-  m_LocalPosition: {x: 0, y: 0, z: 0.2000122}
-  m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
+  m_LocalPosition: {x: 1.2001953, y: 0, z: 0}
+  m_LocalScale: {x: 0.0169, y: 0.0169, z: 0.0169}
   m_Children: []
   m_Father: {fileID: 4626797544923414}
   m_RootOrder: 0
@@ -179,14 +179,14 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1214856456873528}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 8d471e1224b858d448e304cfbd18e3b9, type: 3}
 --- !u!33 &33534824901289358
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1114101383886450}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 8d471e1224b858d448e304cfbd18e3b9, type: 3}
 --- !u!114 &114418525870617218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,20 +198,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5ea575c51f82654ab91f6cef2ba65f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: PlutoSysyem
+  name: PlutoSystem
   radius: 1
   startRotation: 0
   day: 0
   axialTilt: 0
   showTilt: 0
   tiltDistance: 0
-  ShowPath: 0
-  startPosition: 3.99
-  eccentricity: 0.25
+  ShowPath: 1
+  startPosition: 0
+  eccentricity: 0.2488
   distance: 3630
   year: 2171779
   parent: {fileID: 0}
-  line: {fileID: 120725456936165918}
 --- !u!114 &114486077904472704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,11 +223,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Charon
-  radius: 0.12
+  radius: 0.0086
   startRotation: 0
   day: 153.36
   axialTilt: 0
-  showTilt: 0
+  showTilt: 1
   tiltDistance: 7
   ShowPath: 1
   startPosition: 5.46
@@ -236,7 +235,6 @@ MonoBehaviour:
   distance: 2
   year: 0.6
   parent: {fileID: 114418525870617218}
-  line: {fileID: 120302713913916788}
 --- !u!114 &114740463078537248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -249,11 +247,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Pluto
-  radius: 0.18
+  radius: 0.0169
   startRotation: 48
   day: 153.36
   axialTilt: 120
-  showTilt: 0
+  showTilt: 1
   tiltDistance: 7
   ShowPath: 1
   startPosition: 4.95
@@ -261,7 +259,6 @@ MonoBehaviour:
   distance: 0.2
   year: 0.39
   parent: {fileID: 114418525870617218}
-  line: {fileID: 120757773006183098}
 --- !u!120 &120302713913916788
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -358,7 +355,7 @@ LineRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1388443999102340}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 0

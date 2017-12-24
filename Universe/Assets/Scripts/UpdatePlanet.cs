@@ -22,8 +22,8 @@ public class UpdatePlanet : Editor {
 
     void SetPlanet(Planet obj, float positionTheta, float rotationDegrees)
     {
-            obj.line = obj.gameObject.GetComponent<LineRenderer>();
-            obj.line.positionCount = 0;
+            //obj.line = obj.gameObject.GetComponent<LineRenderer>();
+            //obj.line.positionCount = 0;
             obj.gameObject.name = obj.name;
             obj.transform.localScale = Vector3.one * obj.radius;
             obj.transform.localRotation = Quaternion.Euler(obj.axialTilt, 0f, 0f);

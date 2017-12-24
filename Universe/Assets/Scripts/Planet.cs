@@ -35,7 +35,7 @@ public class Planet : MonoBehaviour {
     [Header("Parent Object")]
     [Space]
     public Planet parent;
-    public LineRenderer line;
+    private LineRenderer line;
     private int size = 100;
     private float width = .2f;
     private GameManager manager;
@@ -43,18 +43,14 @@ public class Planet : MonoBehaviour {
     
     void Awake()
     {
-        if (line == null)
-        {
-            line = gameObject.GetComponent<LineRenderer>();
-           
-        }
 
+        line = gameObject.GetComponent<LineRenderer>();
         line.positionCount = size;
         line.startWidth = width;
         line.endWidth = width;
 
         manager = FindObjectOfType<GameManager>();
-        manager.planets.Add(this);
+        manager.planets.Add(this.gameObject);
     }
 
     void Start()
@@ -92,6 +88,18 @@ public class Planet : MonoBehaviour {
     {
         ShowAxialTilt(showTilt, tiltDistance);
         
+    }
+
+    private void OnMouseOver()
+    {
+        MeshRenderer renderer = GetComponent<MeshRenderer>();
+        renderer.material.color = new Color(1.0f, .5f, 0.0f);
+    }
+
+    private void OnMouseExit()
+    {
+        MeshRenderer renderer = GetComponent<MeshRenderer>();
+        renderer.material.color = new Color(1.0f, 1.0f, 1.0f);
     }
 
     void Rotation(float hours)

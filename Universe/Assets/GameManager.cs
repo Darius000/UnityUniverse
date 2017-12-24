@@ -8,35 +8,34 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 
   
-    public List<Planet> planets;
+    public List<GameObject> planets;
+    public Dropdown dropDownList;
+    public GameObject selectedPlanet;
+    public int SelectedIndex = 0;
 
-    InputField inputField;
-
-    public Camera cam;
-
-    public float cameraDistance = 10f;
-
-	// Use this for initialization
-	void Start () {
-        inputField = gameObject.GetComponent<InputField>();
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void SetOrbitWidths()
+    public void AddOptions()
     {
-        foreach(Planet planet in planets)
+        foreach(GameObject planet in planets)
         {
-            planet.line.startWidth = float.Parse(inputField.text);
+            if(dropDownList != null)
+            {
+                Dropdown.OptionData data = new Dropdown.OptionData();
+                data.text = planet.name;
+                dropDownList.options.Add(data);
+            }
         }
     }
 
-    public void moveCameraToPlanet(Planet planet)
+    public void GetValue()
     {
-        cam.transform.position = planet.transform.position + (Vector3.one * (planet.radius + cameraDistance));
+        SelectedIndex = dropDownList.value;
+        selectedPlanet = planets[SelectedIndex];
+
+        print(SelectedIndex + ":" + selectedPlanet.name);
+    }
+
+    private void Start()
+    {
+        AddOptions();
     }
 }

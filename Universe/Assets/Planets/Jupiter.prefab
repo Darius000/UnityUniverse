@@ -18,12 +18,13 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4558440210536076}
+  - component: {fileID: 224191564138941226}
   - component: {fileID: 33400940491206250}
   - component: {fileID: 135070221891634770}
   - component: {fileID: 23075073075957700}
   - component: {fileID: 114045252243645358}
   - component: {fileID: 120621040669422506}
+  - component: {fileID: 222269734113480358}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Untagged
@@ -31,19 +32,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4558440210536076
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1562355173079056}
-  m_LocalRotation: {x: 0.0104514705, y: 0.9235349, z: 0.025232086, w: 0.38254067}
-  m_LocalPosition: {x: 321.76083, y: 0, z: -430.6525}
-  m_LocalScale: {x: 9.92, y: 9.92, z: 9.92}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23075073075957700
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -82,7 +70,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1562355173079056}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 8d471e1224b858d448e304cfbd18e3b9, type: 3}
 --- !u!114 &114045252243645358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,26 +83,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Jupiter
-  radius: 9.92
+  radius: 1
   startRotation: 135
   day: 12
   axialTilt: 3.13
   showTilt: 0
   tiltDistance: 7
-  ShowPath: 1
+  ShowPath: 0
   startPosition: 2.31
-  eccentricity: 0.045
+  eccentricity: 0.0484
   distance: 483.77
   year: 103893.6
   parent: {fileID: 0}
-  line: {fileID: 120621040669422506}
 --- !u!120 &120621040669422506
 LineRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1562355173079056}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_MotionVectors: 0
@@ -210,3 +197,27 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!222 &222269734113480358
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1562355173079056}
+--- !u!224 &224191564138941226
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1562355173079056}
+  m_LocalRotation: {x: 0.0104514705, y: 0.9235349, z: 0.025232086, w: 0.38254067}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 669.4618, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}

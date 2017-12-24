@@ -1,8 +1,9 @@
 ﻿Shader "Custom/PlanetShader" {
-	Properties {
+	Properties {	
 		_dayTex("Day" , 2D) = "white"{}
 		_nightTex("Night" , 2D) = "white"{}
 		_cloudTex("Clouds", 2D) = "white" {}
+		_Color("Color",Color) = (1.0,1.0,1.0,1.0)
 		lightIntensity("Light Intensity",Range(0,10)) = 0.0
 		cloudColor("Cloud Color", Color) = (1.0,1.0,1.0,1.0)
 		cloudSharpness("Cloud Sharpness",Range(1,10)) = 0.0
@@ -48,6 +49,7 @@
 		float3 nightAlbedo;
 		float3 dayAlbedo;
 		float3 cloudAlbedo;
+		float4 _Color;
 
 
 		void blur()
@@ -90,7 +92,7 @@
 
 			c.a = s.Alpha;
 			
-			return c;
+			return c * _Color;
 		}
 
 

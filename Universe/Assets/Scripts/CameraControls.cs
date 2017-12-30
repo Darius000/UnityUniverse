@@ -9,8 +9,8 @@ public class CameraControls : MonoBehaviour {
     public float zoomSpeed = 1.0f;
 
     public static Camera main;
+    public Transform target;
 
-    private Vector3 newPosition;
     private CameraTarget targetScript;
 
     // Use this for initialization
@@ -24,12 +24,22 @@ public class CameraControls : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        ZoomCamera(main, Input.GetAxis("Mouse ScrollWheel") * zoomSpeed);
+        if(Input.GetAxis("Mouse ScrollWheel") != 0.0f)
+        {
+            ZoomCamera(main, Input.GetAxis("Mouse ScrollWheel") * zoomSpeed);
+        }
+
+        if(Input.GetMouseButton(0))
+        {
+            RotateCamera(main, Input.GetAxis("Mouse X") * 100.0f,target);
+
+            print("Rotate");
+        }    
 	}
 
     void ZoomCamera(Camera camera,float axis)
     {    
-        newPosition += new Vector3(0.0f, 0.0f, axis);
+        Vector3 newPosition = new Vector3(0.0f, 0.0f, axis);
 
         camera.transform.Translate(newPosition);
 
@@ -44,4 +54,19 @@ public class CameraControls : MonoBehaviour {
     {
 
     }
+
+
+    void RotateCamera(Camera camera, float speed,Transform target = null)
+    {
+        if(target != null)
+        {
+            camera.transform.RotateAround(target.position, Vector3.up, speed);
+        }
+        else
+        {
+            camera.transform.Rotate(Vector3.up * speed);
+        }
+        
+    }
+  
 }

@@ -9,6 +9,7 @@ public class CameraTarget : MonoBehaviour {
 
     public GameObject planet;
     public Vector3 offset = Vector3.one;
+    public Vector3 offset2 = Vector3.one;
     public int mouseButton;
     public Camera planetViewer;
     public GameObject gameMode;
@@ -40,11 +41,15 @@ public class CameraTarget : MonoBehaviour {
     {
         if (newPlanet != null)
         {
-            planetViewer.transform.position = newPlanet.transform.position + (-Vector3.one * planetRadius);
+            Vector3 newPosition = newPlanet.transform.position + (offset2 * planetRadius);
+
+            planetViewer.transform.position = newPlanet.transform.position + (offset2 * planetRadius);
+
             planetViewer.transform.LookAt(currentPlanet.transform.position, Vector3.up);
 
-            currentCamera.transform.position = newPlanet.transform.position + (offset * planetRadius);
-            currentCamera.transform.LookAt(currentPlanet.transform.position, Vector3.up);
+            currentCamera.transform.position = newPosition;
+
+            //currentCamera.transform.LookAt(currentPlanet.transform.position, Vector3.up);
         }
     }
 

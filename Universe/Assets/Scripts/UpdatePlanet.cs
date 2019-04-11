@@ -10,12 +10,12 @@ public class UpdatePlanet : Editor {
     {
         base.OnInspectorGUI();
 
-        Planet planet = (Planet)target;
+        //Planet planet = (Planet)target;
 
-        if (!Application.isPlaying)
-        {
-            SetPlanet(planet,0f,planet.startRotation);
-        }
+        //if (!Application.isPlaying)
+        //{
+        //    SetPlanet(planet,0f,planet.startRotation);
+        //}
       
             
     }

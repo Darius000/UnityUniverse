@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Earth_Clouds
-  m_Shader: {fileID: 4800000, guid: 4ac82d364d6b9a349a5fa256a7225b13, type: 3}
-  m_ShaderKeywords: 
+  m_Name: phobos
+  m_Shader: {fileID: 4800000, guid: 5cfdb04f388eea347959164cf231b6f2, type: 3}
+  m_ShaderKeywords: _PARALLAXMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -18,8 +18,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_362AEBE:
-        m_Texture: {fileID: 2800000, guid: 871bbe14daaba4947930b553f0b4642b, type: 3}
+    - Texture2D_B0405E2B:
+        m_Texture: {fileID: 2800000, guid: a89fe5fccb62e1f4d80c4e21204fd659, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_D7D776E0:
+        m_Texture: {fileID: 2800000, guid: 50df9fc41b7ffbe429390eedc2b08acc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_DEAE8312:
+        m_Texture: {fileID: 2800000, guid: e6b13482f0ea64146854868e61e7c00f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -43,7 +51,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 50df9fc41b7ffbe429390eedc2b08acc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -55,20 +63,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 50df9fc41b7ffbe429390eedc2b08acc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Boolean_D8306977: 0
-    - Vector1_B5178A2: 0.1
-    - _AlphaClip: 0
-    - _Blend: 0
+    - Boolean_76527E23: 0
+    - Boolean_F8860F8C: 0
     - _BumpScale: 1
-    - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -76,17 +77,16 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
+    - _Mode: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.02
+    - _Parallax: 0.08
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Surface: 0
     - _UVSec: 0
-    - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_46DE90FF: {r: 1, g: 1, b: 1, a: 0}
-    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - Color_18DCD0D2: {r: 2.608238, g: 2.608238, b: 2.608238, a: 0}
+    - Vector3_3FE94B91: {r: 1, g: 0, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

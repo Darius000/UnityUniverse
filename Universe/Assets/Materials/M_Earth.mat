@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: earth
+  m_Name: M_Earth
   m_Shader: {fileID: 4800000, guid: 5cfdb04f388eea347959164cf231b6f2, type: 3}
   m_ShaderKeywords: BOOLEAN_76527E23_ON BOOLEAN_F8860F8C_ON
   m_LightmapFlags: 4
@@ -34,6 +34,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: e6b13482f0ea64146854868e61e7c00f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_267A2556_Texture:
+        m_Texture: {fileID: 2800000, guid: 26104811c6b8a16458d643c76a1cb1bd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_76527E23: 1
     - Boolean_F8860F8C: 1
@@ -41,3 +45,4 @@ Material:
     - Vector1_ED202020: 0.88
     m_Colors:
     - Color_18DCD0D2: {r: 1, g: 1, b: 1, a: 0}
+    - Vector3_3FE94B91: {r: 0, g: 0, b: 0, a: 0}
